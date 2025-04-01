@@ -1,0 +1,258 @@
+:root{
+    --buttonBg-color: rgb(254, 254, 254);
+    --text-color:grey;
+    --button-color: rgb(0, 112, 240);
+    --search-bar:rgb(223, 223, 223);
+    --transition-items: all 700ms ease-in;
+  }
+  
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      outline: none;
+      border: none;
+      list-style: none;
+      font-family: sans-serif;
+  }
+  
+  body{
+      overflow-x: hidden;
+  }
+  
+
+  .header {
+    background-color: #222;
+    color: white;
+    padding: 10px 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .main{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header .main .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--buttonBg-color);
+}
+
+.header .main img{
+    width: 5rem;
+}
+
+.header-left {
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(to right bottom, #ffc107 50%, transparent 50%);
+}
+
+.header-right {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.orders {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.orders .left {
+    max-width: 40rem;
+    min-height: 100vh;
+    padding: 0 2rem 2rem 2rem;
+    background-color: var(--search-bar);
+    border-right: 2px solid var(--text-color);
+}
+
+.orders .left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.orders .left ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--buttonBg-color);
+    margin-bottom: 5px;
+}
+
+.orders .left ul li h2 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.orders .left ul li h3 {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--button-color);
+}
+
+.orders .left img {
+    width: 5rem;
+    mix-blend-mode: darken;
+    /* height: auto; */
+}
+
+.orders .right {
+    min-height: 100vh;
+    flex: 1;
+    padding: 2rem;
+}
+
+.orders .right .top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.orders form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.orders form .content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    max-width: 40rem;
+    padding: 0.5rem 0;
+}
+
+.orders form .content input,
+.orders form .content select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--text-color);
+}
+
+.orders form .content select {
+    cursor: pointer;
+}
+
+.orders form button {
+    padding: 1rem 8rem;
+    background-color: var(--button-color);
+    color: var(--buttonBg-color);
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    margin-top: 1rem;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    border-top: 1px solid var(--search-bar);
+}
+
+footer img{
+    width: 7rem;
+}
+
+footer .left img{
+    padding-bottom: 10px;
+}
+
+footer .left p{
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+footer .right{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer .right h2{
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+footer .right ul{
+    padding-top: 1rem;
+}
+
+footer .right ul li{
+    color: var(--text-color);
+    font-weight: 300;
+    padding-bottom: 15px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .orders {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .orders .left {
+        max-width: 100%;
+        min-height: auto;
+    }
+    .orders form .content input,
+    .orders form .content select {
+        width: 100%;
+    }
+    .orders form button {
+        padding: 1rem 6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .orders .left img {
+        width: 7rem;
+    }
+    .orders form .content input,
+    .orders form .content select {
+        padding: 0.8rem;
+    }
+    .orders form button {
+        padding: 1rem 4rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .orders form .content input,
+    .orders form .content select {
+        padding: 0.7rem;
+    }
+    .orders form button {
+        padding: 1rem 3rem;
+        font-size: 0.9rem;
+    }
+}
